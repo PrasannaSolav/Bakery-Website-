@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bake My Day - Fresh Bakes Online</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="icon" href="https://via.placeholder.com/32x32?text=O" alt="Logo" />
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=50&h=50&fit=crop"
+                alt="Orchid Bakery Logo" />
+            <h1>Bake My Day</h1>
+        </div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#products">Products</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#contact">Contact</a>
+            <a href="#cart" id="cart-link">Cart (<span id="cart-count">0</span>)</a>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <img src="https://images.unsplash.com/photo-1595144780677-6d0b5abbd089?w=1200&h=400&fit=crop"
+            alt="Bakery Interior" />
+
+        <div class="hero-text">
+            <h2>Welcome to Bakery!</h2>
+            <p>
+                Fresh cakes, pastries, and breads baked daily. Order online for
+                doorstep delivery in Amravati.
+            </p>
+            <a href="#products" class="btn">Shop Now</a>
+        </div>
+    </section>
+    <section id="daily-specials">
+        <h2>Today's Daily Specials</h2>
+        <p>
+            Fresh bakes available only today – limited stock! Updated daily for
+            variety.
+        </p>
+        <div class="specials-grid">
+            <div class="product special" data-id="7" data-name="Red Velvet Cake" data-price="420">
+                <span class="badge">Daily Special</span>
+                <img src="https://images.unsplash.com/photo-1614707269211-474b2510b3ad?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="Red Velvet Cake" />
+                <h3>Red Velvet Cake</h3>
+                <p>
+                    Moist red velvet with cream cheese frosting – a customer favorite!
+                </p>
+                <p class="price">₹420</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product special" data-id="8" data-name="Blueberry Muffins (Pack of 6)" data-price="280">
+                <span class="badge">Daily Special</span>
+                <img src="https://plus.unsplash.com/premium_photo-1711684804216-4ad043c102d3?q=80&w=688&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="Blueberry Muffins" />
+                <h3>Blueberry Muffins (Pack of 6)</h3>
+                <p>Fluffy muffins bursting with fresh blueberries.</p>
+                <p class="price">₹280</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product special" data-id="9" data-name="Pistachio Kulfi" data-price="150">
+                <span class="badge">Daily Special</span>
+                <img src="https://media.istockphoto.com/id/2154324654/photo/dry-fruits-kulfi.jpg?s=2048x2048&w=is&k=20&c=Pzj3XMLylawmCLwidGfA2XALmq38Fmf7e78kkcLFxBs="
+                    alt="Pistachio Kulfi" />
+                <h3>Pistachio Kulfi</h3>
+                <p>Creamy Indian ice cream with pistachios – refreshing and sweet.</p>
+                <p class="price">₹150</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product special" data-id="10" data-name="Lemon Tart" data-price="350">
+                <span class="badge">Daily Special</span>
+                <img src="https://plus.unsplash.com/premium_photo-1722013242789-46b0c6cc7321?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="Lemon Tart" />
+                <h3>Lemon Tart</h3>
+                <p>Tangy lemon filling in a buttery crust – zesty and delightful.</p>
+                <p class="price">₹350</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product special" data-id="11" data-name="Chocolate Brownies (Pack of 8)" data-price="320">
+                <span class="badge">Daily Special</span>
+                <img src="https://images.unsplash.com/photo-1606312619070-d48b4c652a52?w=300&h=200&fit=crop"
+                    alt="Chocolate Brownies" />
+                <h3>Chocolate Brownies (Pack of 8)</h3>
+                <p>Fudgy brownies with walnuts – perfect for chocolate lovers.</p>
+                <p class="price">₹320</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product special" data-id="12" data-name="Rasgulla Sweets (Pack of 12)" data-price="200">
+                <span class="badge">Daily Special</span>
+                <img src="https://media.istockphoto.com/id/1217555080/photo/isollated-sponge-rasgulla-sweets-famous-indian-sweet-food.jpg?s=2048x2048&w=is&k=20&c=IWc5irbT0TkIFWOir0rNLr85z8yJrmkLj1KUHLFkKn0="
+                    alt="Rasgulla Sweets" />
+                <h3>Rasgulla Sweets (Pack of 12)</h3>
+                <p>Soft, spongy dumplings in syrup – a Bengali classic.</p>
+                <p class="price">₹200</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product special" data-id="13" data-name="Cinnamon Rolls (Pack of 4)" data-price="250">
+                <span class="badge">Daily Special</span>
+                <img src="https://images.unsplash.com/photo-1567891283840-1f40372208ad?q=80&w=846&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="Cinnamon Rolls" />
+                <h3>Cinnamon Rolls (Pack of 4)</h3>
+                <p>Swirly rolls with cinnamon and icing – warm and comforting.</p>
+                <p class="price">₹250</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product special" data-id="14" data-name="Mango Lassi Cake" data-price="450">
+                <span class="badge">Daily Special</span>
+                <img src="https://media.istockphoto.com/id/2206817566/photo/delicious-mango-float-cake-in-glasses-on-wooden-board-filipino-sweet-cuisine.jpg?s=2048x2048&w=is&k=20&c=GkGJCLq-JDbbQDA6mfG3X4EvIUJsDYHtf6gftmCL8rM="
+                    alt="Mango Lassi Cake" />
+                <h3>Mango Lassi Cake</h3>
+                <p>Creamy cake infused with mango lassi flavor – tropical twist!</p>
+                <p class="price">₹450</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product special" data-id="15" data-name="Almond Biscotti (Pack of 10)" data-price="180">
+                <span class="badge">Daily Special</span>
+                <img src="https://images.unsplash.com/photo-1772986510082-5ea12263781c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="Almond Biscotti" />
+                <h3>Almond Biscotti (Pack of 10)</h3>
+                <p>Crunchy Italian biscuits with almonds – great with coffee.</p>
+                <p class="price">₹180</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product special" data-id="16" data-name="Pineapple Upside-Down Cake" data-price="380">
+                <span class="badge">Daily Special</span>
+                <img src="https://plus.unsplash.com/premium_photo-1664392154731-9921da9c5b41?q=80&w=766&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="Pineapple Upside-Down Cake" />
+                <h3>Pineapple Upside-Down Cake</h3>
+                <p>Caramelized pineapple on a moist cake – sweet and tropical!</p>
+                <p class="price">₹380</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product special" data-id="17" data-name="Vegan Chocolate Chip Cookies (Pack of 12)"
+                data-price="260">
+                <span class="badge">Daily Special</span>
+                <img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=300&h=200&fit=crop"
+                    alt="Vegan Chocolate Chip Cookies" />
+                <h3>Vegan Chocolate Chip Cookies (Pack of 12)</h3>
+                <p>Dairy-free cookies with chocolate chips – chewy and delicious.</p>
+                <p class="price">₹260</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product special" data-id="18" data-name="Jalebi Sweets (Pack of 10)" data-price="220">
+                <span class="badge">Daily Special</span>
+                <img src="https://media.istockphoto.com/id/1159362251/photo/jilebi.jpg?s=2048x2048&w=is&k=20&c=42zSnEGpV0wSLvbzEzQ33vE0e6anPJPGcC6Ogj6YAd0="
+                    alt="Jalebi Sweets" />
+                <h3>Jalebi Sweets (Pack of 10)</h3>
+                <p>Crispy, syrup-soaked spirals – a festive Indian treat.</p>
+                <p class="price">₹220</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+    <section id="products">
+        <h2>Our Bestsellers</h2>
+        <div class="product-grid">
+            <div class="product" data-id="1" data-name="Chocolate Truffle Cake" data-price="450">
+                <img src="https://media.istockphoto.com/id/1292450226/photo/freshly-made-chocolate-truffle-cream-cake-on-wooden-table-selective-focus.jpg?s=2048x2048&w=is&k=20&c=-JDD0gRyCPf5CHeQMOrahV5qKbO7HwxG7T93M38QJik="
+                    alt="Chocolate Truffle Cake" />
+                <h3>Chocolate Truffle Cake</h3>
+                <p>
+                    Rich, decadent chocolate cake with truffle filling. Perfect for
+                    celebrations.
+                </p>
+                <p class="price">₹450</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-id="2" data-name="Vanilla Cupcakes (Pack of 12)" data-price="600">
+                <img src="https://images.unsplash.com/photo-1587668178277-295251f900ce?w=300&h=200&fit=crop"
+                    alt="Vanilla Cupcakes" />
+                <h3>Vanilla Cupcakes (Pack of 12)</h3>
+                <p>Fluffy vanilla cupcakes topped with buttercream frosting.</p>
+                <p class="price">₹600</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-id="3" data-name="Almond Cookies (Pack of 12)" data-price="300">
+                <img src="https://images.unsplash.com/photo-1554298377-9e4df6fd965c?q=80&w=1094&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="Almond Cookies" />
+                <h3>Almond Cookies (Pack of 12)</h3>
+                <p>
+                    Crunchy cookies studded with almonds – perfect for tea time or
+                    gifting.
+                </p>
+                <p class="price">₹300</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-id="4" data-name="Butter Croissants (Pack of 6)" data-price="480">
+                <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=300&h=200&fit=crop"
+                    alt="Butter Croissants" />
+                <h3>Butter Croissants (Pack of 6)</h3>
+                <p>Flaky, buttery croissants – a French classic made fresh.</p>
+                <p class="price">₹480</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-id="5" data-name="Strawberry Cheesecake" data-price="550">
+                <img src="https://plus.unsplash.com/premium_photo-1672192166851-71d218e64544?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="Strawberry Cheesecake" />
+                <h3>Strawberry Cheesecake</h3>
+                <p>Creamy cheesecake topped with fresh strawberries.</p>
+                <p class="price">₹550</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-id="6" data-name="Custom Birthday Cake" data-price="800">
+                <img src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=300&h=200&fit=crop"
+                    alt="Custom Birthday Cake" />
+                <h3>Custom Birthday Cake</h3>
+                <p>Personalized cakes for birthdays – choose flavors and designs.</p>
+                <p class="price">₹800 (Base Price)</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-id="1" data-name="Ras Malai Cake" data-price="400">
+                <img src="https://media.istockphoto.com/id/1359108105/photo/rasmalai-cake.jpg?s=2048x2048&w=is&k=20&c=HW2DiumjOEfV11YHmBVILUkquIpILz7pTZp0s5i31Po="
+                    alt="Ras Malai Cake" />
+                <h3>Ras Malai Cake</h3>
+                <p>
+                    Soft sponge cake infused with ras malai flavor – a fusion delight!
+                </p>
+                <p class="price">₹400</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-id="2" data-name="Pani Puri Snacks (Pack of 20)" data-price="250">
+                <img src="https://media.istockphoto.com/id/1314329942/photo/goal-gappa-or-pani-puri.jpg?s=2048x2048&w=is&k=20&c=7lJJf2WujQVpKhhRfMSb6JOb-hK1jw4rp1KUxqgqang="
+                    alt="Pani Puri Snacks" />
+                <h3>Pani Puri Snacks (Pack of 20)</h3>
+                <p>
+                    Crispy puris with tangy water – perfect for parties or quick bites.
+                </p>
+                <p class="price">₹250</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-id="3" data-name="Masala Bread" data-price="120">
+                <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=300&h=200&fit=crop"
+                    alt="Masala Bread" />
+                <h3>Masala Bread</h3>
+                <p>Spiced bread loaf with herbs and spices – great for sandwiches.</p>
+                <p class="price">₹120</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-id="4" data-name="Gulab Jamun (Pack of 10)" data-price="350">
+                <img src="https://images.unsplash.com/photo-1681476747916-8a8fc7e2001e?q=80&w=686&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="Gulab Jamun" />
+                <h3>Gulab Jamun (Pack of 10)</h3>
+                <p>
+                    Sweet dumplings soaked in rose syrup – a traditional Indian dessert.
+                </p>
+                <p class="price">₹350</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-id="5" data-name="Black Forest Cake" data-price="500">
+                <img src="https://images.unsplash.com/photo-1605807646983-377bc5a76493?q=80&w=1024&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="Black Forest Cake" />
+                <h3>Black Forest Cake</h3>
+                <p>
+                    Classic chocolate cake with cherries and cream – rich and indulgent.
+                </p>
+                <p class="price">₹500</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-id="6" data-name="Custom Wedding Cake" data-price="1500">
+                <img src="https://plus.unsplash.com/premium_photo-1764179204838-cdace0c97c40?w=300&h=200&fit=crop"
+                    alt="Custom Wedding Cake" />
+                <h3>Custom Wedding Cake</h3>
+                <p>
+                    Tailored cakes for weddings – choose tiers, flavors, and
+                    decorations.
+                </p>
+                <p class="price">₹1,500 (Base Price)</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="cart" class="hidden">
+        <h2>Your Shopping Cart</h2>
+        <div id="cart-items"></div>
+        <p class="total">Total: ₹<span id="cart-total">0</span></p>
+        <button id="checkout-btn" class="btn">Proceed to Checkout</button>
+        <button id="continue-shopping" class="btn secondary">
+            Continue Shopping
+        </button>
+    </section>
+
+    <section id="checkout" class="hidden">
+        <h2>Checkout</h2>
+        <form id="checkout-form">
+            <label>Full Name: <input type="text" id="name" required /></label>
+            <label>Phone Number: <input type="tel" id="phone" required /></label>
+            <label>Delivery Address: <textarea id="address" required></textarea>
+            </label>
+            <label>Special Instructions: <textarea id="instructions"></textarea>
+            </label>
+            <p class="total">Order Total: ₹<span id="checkout-total">0</span></p>
+            <button type="submit" class="btn">Place Order</button>
+        </form>
+    </section>
+
+    <section id="gallery">
+        <h2>Gallery</h2>
+        <div class="gallery-grid">
+            <img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=300&h=200&fit=crop"
+                alt="Bakery Display Case" />
+            <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=300&h=200&fit=crop"
+                alt="Chocolate Cake Closeup" />
+            <img src="https://images.unsplash.com/photo-1587668178277-295251f900ce?w=300&h=200&fit=crop"
+                alt="Colorful Cupcakes" />
+            <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=300&h=200&fit=crop"
+                alt="Fresh Croissants" />
+            <img src="https://images.unsplash.com/photo-1533134242443-d4fd215305ad?w=300&h=200&fit=crop"
+                alt="Strawberry Cheesecake" />
+            <img src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=300&h=200&fit=crop"
+                alt="Layered Birthday Cake" />
+            <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=300&h=200&fit=crop"
+                alt="Bakery Interior with Loaves" />
+            <img src="https://images.unsplash.com/photo-1606312619070-d48b4c652a52?w=300&h=200&fit=crop"
+                alt="Decorated Pastries" />
+            <img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=300&h=200&fit=crop"
+                alt="Assorted Cookies" />
+            <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=300&h=200&fit=crop"
+                alt="Bakery Interior with Loaves" />
+            <img src="https://images.unsplash.com/photo-1606312619070-d48b4c652a52?w=300&h=200&fit=crop"
+                alt="Decorated Pastries" />
+            <img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=300&h=200&fit=crop"
+                alt="Assorted Cookies" />
+        </div>
+    </section>
+
+    <section id="testimonials">
+        <h2>What Our Customers Say</h2>
+        <div class="testimonial">
+            <p>
+                "Best cakes in Amravati! Ordered a chocolate cake for my anniversary –
+                it was perfect!"
+            </p>
+            <cite>- Priya S., Amravati</cite>
+        </div>
+        <div class="testimonial">
+            <p>"Fresh bread every morning. Highly recommend their croissants!"</p>
+            <cite>- Rajesh K., Local Customer</cite>
+        </div>
+        <div class="testimonial">
+            <p>
+                "Best cakes in Amravati! Ordered a chocolate cake for my anniversary –
+                it was perfect!"
+            </p>
+            <cite>- Priya S., Amravati</cite>
+        </div>
+        <div class="testimonial">
+            <p>"Fresh bread every morning. Highly recommend their croissants!"</p>
+            <cite>- Rajesh K., Local Customer</cite>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="contact-info">
+            <h2>Contact Us</h2>
+            <p>
+                Address: Bakery, Near City Center, Amravati, Maharashtra 444601, India
+            </p>
+            <p>Phone: +91-98765-43210 | Email: bakemyday@gmail.com</p>
+            <p>Hours: 7 AM - 9 PM Daily | Free Delivery within 5 km</p>
+        </div>
+        <div class="map">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14904.319918841986!2d77.74770793596957!3d20.949303033529215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd6a3678741fa39%3A0x396dc49044af12c7!2sGadge%20Nagar%2C%20Amravati%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1767686445286!5m2!1sen!2sin"
+                width="100%" height="300" style="border: 0" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+
+    <footer>
+        <p>
+            &copy; 2026 Bake My Day. All rights reserved. | Follow us on Instagram
+            bakemyday_amravati | Facebook BakeMyDayAmravati
+        </p>
+        <p id="copyright">Made By &#10084; Prasanna</p>
+    </footer>
+
+    <script src="/script.js"></script>
+</body>
+
+</html>
